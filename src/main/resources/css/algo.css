@@ -1,0 +1,66 @@
+@url bgImg bgImage;
+
+body {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: bgImg;
+    background-origin: padding-box;
+    background-size: auto;
+    box-sizing: border-box;
+    color: rgb(199, 199, 199);
+    display: block;
+    line-height: 18px;
+
+}
+
+ul.menu_shadowed {
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.419608) 0px 0px 5px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px 0px;
+    -webkit-font-smoothing: antialiased;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0.34902);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    box-shadow: rgba(0, 0, 0, 0.419608) 0px 0px 5px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px 0px;
+    box-sizing: border-box;
+    color: rgb(199, 199, 199);
+    display: block;
+    font-family: Actor;
+    font-size: 13px;
+    height: 414px;
+    line-height: 18px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    width: 200px;
+}
+
+.menu_shadowed > li > a {
+    border-bottom: 1px solid #292929;
+    padding: 7px 7px;
+    display: block;
+    color: #C7C7C7;
+    font-size: 13px;
+    font-family: Verdana;
+    text-decoration: none;
+}
+
+.menu_shadowed > li > a:hover, .menu_shadowed > li > a:active {
+    color: darkorange;
+}
+
+
+
