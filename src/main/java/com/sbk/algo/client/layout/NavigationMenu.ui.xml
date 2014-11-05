@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+        >
+    <ui:with field='css' type="com.sbk.algo.client.resources.AlgoResources"/>
+    <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
+    <g:HTMLPanel>
+        <ul class="{css.algoCSS.menuShadowed}">
+            <li>
+                <g:Anchor text="{i18n.sorting}" href="#sorting:"/>
+            </li>
+            <li>
+                <g:Anchor text="{i18n.graphs}" href="#graphs:"/>
+            </li>
+            <li>
+                <g:Anchor text="{i18n.matrix}" href="#matrix:"/>
+            </li>
+        </ul>
+    </g:HTMLPanel>
+
+</ui:UiBinder>
