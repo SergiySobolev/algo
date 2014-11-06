@@ -1,13 +1,13 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-             xmlns:g="urn:import:com.google.gwt.user.client.ui"
-        >
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
     <ui:with field='css' type="com.sbk.algo.client.resources.AlgoResources"/>
     <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
     <g:HTMLPanel>
-        <ul class="{css.algoCSS.menuShadowed}">
+        <ul class="{css.algoCSS.menu} {css.algoCSS.shadowed}">
             <li>
-                <g:Anchor text="{i18n.sorting}" href="#sorting:"/>
+            <g:Anchor text="{i18n.sorting}" href="#sorting:"/>
             </li>
             <li>
                 <g:Anchor text="{i18n.graphs}" href="#graphs:"/>

@@ -7,6 +7,9 @@ import com.google.gwt.i18n.client.Constants;
  */
 public interface AlgoConstants extends Constants {
 
+    @DefaultStringValue("Algorithms")
+    String algorithms();
+
     @DefaultStringValue("Sorting")
     String sorting();
 

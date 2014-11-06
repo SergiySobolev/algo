@@ -11,10 +11,28 @@ body {
     color: rgb(199, 199, 199);
     display: block;
     line-height: 18px;
-
+    font-family: Verdana;
 }
 
-ul.menu_shadowed {
+.header {
+    padding: 15px;
+}
+
+.logo {
+    color: #c7c7c7;
+    text-shadow: 1px 1px 1px #000;
+    float: left;
+    font-size: 18px;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.shadowed {
+    background: rgba(0, 0, 0, .35);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .42) inset, 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+ul.menu {
     -webkit-background-clip: border-box;
     -webkit-background-origin: padding-box;
     -webkit-background-size: auto;
@@ -30,8 +48,7 @@ ul.menu_shadowed {
     box-sizing: border-box;
     color: rgb(199, 199, 199);
     display: block;
-    font-family: Actor;
-    font-size: 13px;
+    font-size: 15px;
     height: 414px;
     line-height: 18px;
     list-style-image: none;
@@ -48,17 +65,16 @@ ul.menu_shadowed {
     width: 200px;
 }
 
-.menu_shadowed > li > a {
+.menu > li > a {
     border-bottom: 1px solid #292929;
     padding: 7px 7px;
     display: block;
     color: #C7C7C7;
-    font-size: 13px;
-    font-family: Verdana;
+    font-size: 15px;
     text-decoration: none;
 }
 
-.menu_shadowed > li > a:hover, .menu_shadowed > li > a:active {
+.shadowed > li > a:hover, a.shadowed:hover {
     color: darkorange;
 }
 

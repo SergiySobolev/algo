@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:with field='css' type="com.sbk.algo.client.resources.AlgoResources"/>
+    <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
+
+    <gwt:HTMLPanel addStyleNames="{css.algoCSS.header}">
+        <gwt:Anchor text="{i18n.algorithms}" href="#sorting:"
+                    addStyleNames="{css.algoCSS.shadowed} {css.algoCSS.logo}"/>
+    </gwt:HTMLPanel>
+
+</ui:UiBinder>
