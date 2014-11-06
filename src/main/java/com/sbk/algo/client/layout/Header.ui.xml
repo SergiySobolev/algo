@@ -8,6 +8,10 @@
     <gwt:HTMLPanel addStyleNames="{css.algoCSS.header}">
         <gwt:Anchor text="{i18n.algorithms}" href="#sorting:"
                     addStyleNames="{css.algoCSS.shadowed} {css.algoCSS.logo}"/>
+        <gwt:HTMLPanel addStyleNames="{css.algoCSS.topSearch} {css.algoCSS.shadowed}">
+            <gwt:TextBox addStyleNames="{css.algoCSS.formControl} {css.algoCSS.shadowed}"
+                         ui:field="searchBox"/>
+        </gwt:HTMLPanel>
     </gwt:HTMLPanel>
 
 </ui:UiBinder>

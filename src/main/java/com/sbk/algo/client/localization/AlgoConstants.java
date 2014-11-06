@@ -18,4 +18,7 @@ public interface AlgoConstants extends Constants {
 
     @DefaultStringValue("Matrix")
     String matrix();
+
+    @DefaultStringValue("Search for algorithms...")
+    String searchAlgorithms();
 }

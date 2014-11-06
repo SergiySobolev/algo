@@ -78,5 +78,32 @@ ul.menu {
     color: darkorange;
 }
 
+.top-search {
+    float: right;
+    position: relative;
+    padding-right: 30px;
+}
+
+.form-control {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #555;
+}
+
+.top-search .form-control {
+    height: 35px;
+    font-family: inherit;
+    width: 230px;
+}
+
+.top-search input[type=text] {
+    border: 0;
+    background: 0 0;
+}
+
+.float-right {
+    float: right;
+}
+
 
 
