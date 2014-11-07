@@ -21,6 +21,10 @@ public class AlgoLayout extends Composite {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
+    public SimplePanel getAppContent() {
+        return appContent;
+    }
+
     interface AlgoLayoutUiBinder extends UiBinder<Widget, AlgoLayout> {
     }
 }
