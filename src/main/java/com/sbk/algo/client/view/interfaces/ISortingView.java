@@ -8,6 +8,7 @@ import com.google.gwt.user.client.ui.IsWidget;
 public interface ISortingView extends IsWidget {
     void setPresenter(ISortingPresenter presenter);
 
+    void init();
 
     interface ISortingPresenter {
 

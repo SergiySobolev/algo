@@ -41,13 +41,16 @@ public class AlgoGinClientModule extends AbstractGinModule {
         bind(PlaceHistoryHandler.class).toProvider(PlaceHistoryHandlerProvider.class).asEagerSingleton();
         bind(ActivityManager.class).toProvider(ActivityManagerProvider.class).asEagerSingleton();
         bind(Place.class).to(SortingPlace.class);
-        bind(AlgoResources.class).in(Singleton.class);
+        bind(AlgoResources.class).asEagerSingleton();
         //activities;
         bind(SortingActivity.class).in(Singleton.class);
         bind(GraphActivity.class).in(Singleton.class);
         //views
+
         bind(ISortingView.class).to(SortingView.class).in(Singleton.class);
         bind(IGraphView.class).to(GraphView.class).in(Singleton.class);
+//        bind(GraphView.class).in(Singleton.class);
+//        bind(SortingView.class).in(Singleton.class);
 
         requestStaticInjection(Algo.class);
     }

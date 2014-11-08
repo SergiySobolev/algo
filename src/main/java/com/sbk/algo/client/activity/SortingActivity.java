@@ -16,6 +16,7 @@ public class SortingActivity extends AbstractAlgoActivity implements ISortingVie
     @Override
     public void start(AcceptsOneWidget panel, EventBus eventBus) {
         view.setPresenter(this);
+        view.init();
         panel.setWidget(view.asWidget());
     }
 

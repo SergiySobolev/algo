@@ -16,6 +16,7 @@ public class GraphActivity extends AbstractAlgoActivity implements IGraphView.IG
     @Override
     public void start(AcceptsOneWidget panel, EventBus eventBus) {
         view.setPresenter(this);
+        view.init();
         panel.setWidget(view.asWidget());
     }
 

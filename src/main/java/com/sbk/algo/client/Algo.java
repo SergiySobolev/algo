@@ -7,6 +7,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
+import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.inject.Inject;
@@ -33,6 +34,7 @@ public class Algo implements EntryPoint {
     static Place defaultPlace;
     @Inject
     static AlgoResources resources;
+
     private SimplePanel appContent;
 
     public void onModuleLoad() {
@@ -42,6 +44,7 @@ public class Algo implements EntryPoint {
         activityManager.setDisplay(appContent);
         historyHandler.register(placeController, eventBus, defaultPlace);
         RootLayoutPanel.get().add(mainLayout);
+        History.newItem("sorting:");
     }
 
     private void initInjection() {

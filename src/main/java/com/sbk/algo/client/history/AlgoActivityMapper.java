@@ -8,6 +8,7 @@ import com.sbk.algo.client.activity.GraphActivity;
 import com.sbk.algo.client.activity.SortingActivity;
 import com.sbk.algo.client.place.GraphPlace;
 import com.sbk.algo.client.place.SortingPlace;
+import com.sbk.algo.client.resources.AlgoResources;
 
 public class AlgoActivityMapper implements ActivityMapper {
 
@@ -16,6 +17,9 @@ public class AlgoActivityMapper implements ActivityMapper {
 
     @Inject
     private GraphActivity graphActivity;
+
+    @Inject
+    private AlgoResources resources;
 
     @Override
     public Activity getActivity(Place place) {

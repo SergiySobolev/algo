@@ -1,10 +1,11 @@
-@url bgImg bgGeneral;
+@url bgGen bgGeneral;
+@url bgCon bgContent;
 
 body {
     background-attachment: scroll;
     background-clip: border-box;
     background-color: rgba(0, 0, 0, 0);
-    background-image: bgImg;
+    background-image: bgGen;
     background-origin: padding-box;
     background-size: auto;
     box-sizing: border-box;
@@ -62,7 +63,18 @@ ul.menu {
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 12px;
-    width: 200px;
+    width: 170px;
+}
+
+.content {
+    background-image: bgCon;
+    margin: 16 16 16 16px;
+    padding: 20px 20px 35px;
+    position: relative;
+    color: #333;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .8);
+    width: 900px;
+
 }
 
 .menu > li > a {
