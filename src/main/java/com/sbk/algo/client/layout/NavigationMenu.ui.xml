@@ -7,10 +7,10 @@
     <g:HTMLPanel>
         <ul class="{css.algoCSS.menu} {css.algoCSS.shadowed}">
             <li>
-            <g:Anchor text="{i18n.sorting}" href="#sorting:"/>
+                <g:Anchor text="{i18n.sorting}" href="#sorting:"/>
             </li>
             <li>
-                <g:Anchor text="{i18n.graphs}" href="#graphs:"/>
+                <g:Anchor text="{i18n.graphs}" href="#graph:"/>
             </li>
             <li>
                 <g:Anchor text="{i18n.matrix}" href="#matrix:"/>

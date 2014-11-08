@@ -3,15 +3,15 @@ package com.sbk.algo.client.activity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
-import com.sbk.algo.client.view.interfaces.ISortingView;
+import com.sbk.algo.client.view.interfaces.IGraphView;
 
 /**
  * Created by sobik on 31/08/2014.
  */
-public class SortingActivity extends AbstractAlgoActivity implements ISortingView.ISortingPresenter {
+public class GraphActivity extends AbstractAlgoActivity implements IGraphView.IGraphPresenter {
 
     @Inject
-    private ISortingView view;
+    private IGraphView view;
 
     @Override
     public void start(AcceptsOneWidget panel, EventBus eventBus) {

@@ -1,9 +1,9 @@
 package com.sbk.algo.client;
 
 import com.google.gwt.activity.shared.ActivityManager;
-import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -27,11 +27,11 @@ public class Algo implements EntryPoint {
         EventBus eventBus = injector.getEventBus();
         PlaceController placeController = injector.getPlaceController();
         // activate activity manager and init display
-        ActivityMapper activityMapper = injector.getActivityMapper();
         ActivityManager activityManager = injector.getActivityManager();
         activityManager.setDisplay(appContent);
         PlaceHistoryHandler historyHandler = injector.getPlaceHistoryHandler();
-        historyHandler.register(placeController, eventBus, null);
+        Place defaultPlace = injector.getDefaultPlace();
+        historyHandler.register(placeController, eventBus, defaultPlace);
 
         RootLayoutPanel.get().add(mainLayout);
     }
