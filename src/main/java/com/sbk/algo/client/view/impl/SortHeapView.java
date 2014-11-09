@@ -15,6 +15,9 @@ public class SortHeapView extends Composite implements ISortHeapView {
 
     private ISortHeapPresenter presenter;
 
+//    @UiField
+//    FlowPanel inputDataPanel;
+
     public SortHeapView() {
         initWidget(uiBinder.createAndBindUi(this));
     }
@@ -24,6 +27,7 @@ public class SortHeapView extends Composite implements ISortHeapView {
         this.presenter = presenter;
     }
 
+    //    @UiTemplate("SortHeapView.ui.xml")
     interface SortHeapViewUiBinder extends UiBinder<Widget, SortHeapView> {
     }
 }
