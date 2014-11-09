@@ -6,9 +6,9 @@ import com.google.inject.Inject;
 import com.sbk.algo.client.view.interfaces.IGraphView;
 
 /**
- * Created by sobik on 31/08/2014.
+ * Created by sobik on 09/11/2014.
  */
-public class GraphActivity extends AbstractAlgoActivity implements IGraphView.IGraphPresenter {
+public class SortMergeActivity extends AbstractAlgoActivity implements IGraphView.IGraphPresenter {
 
     @Inject
     private IGraphView view;

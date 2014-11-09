@@ -8,9 +8,6 @@ import com.google.gwt.user.client.ui.IsWidget;
 public interface IGraphView extends IsWidget {
     void setPresenter(IGraphPresenter presenter);
 
-    void init();
-
     interface IGraphPresenter {
-
     }
 }

@@ -5,10 +5,11 @@ import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
 import com.google.inject.Inject;
 import com.sbk.algo.client.activity.GraphActivity;
+import com.sbk.algo.client.activity.SortHeapActivity;
 import com.sbk.algo.client.activity.SortingActivity;
 import com.sbk.algo.client.place.GraphPlace;
+import com.sbk.algo.client.place.SortHeapPlace;
 import com.sbk.algo.client.place.SortingPlace;
-import com.sbk.algo.client.resources.AlgoResources;
 
 public class AlgoActivityMapper implements ActivityMapper {
 
@@ -19,7 +20,7 @@ public class AlgoActivityMapper implements ActivityMapper {
     private GraphActivity graphActivity;
 
     @Inject
-    private AlgoResources resources;
+    private SortHeapActivity sortHeapActivity;
 
     @Override
     public Activity getActivity(Place place) {
@@ -27,6 +28,8 @@ public class AlgoActivityMapper implements ActivityMapper {
             return sortingActivity;
         } else if (place instanceof GraphPlace) {
             return graphActivity;
+        } else if (place instanceof SortHeapPlace) {
+            return sortHeapActivity;
         }
         return null;
     }

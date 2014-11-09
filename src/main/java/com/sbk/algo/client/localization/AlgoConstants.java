@@ -21,4 +21,10 @@ public interface AlgoConstants extends Constants {
 
     @DefaultStringValue("Search for algorithms...")
     String searchAlgorithms();
+
+    @DefaultStringValue("Heap sort")
+    String heapSort();
+
+    @DefaultStringValue("Merge sort")
+    String mergeSort();
 }

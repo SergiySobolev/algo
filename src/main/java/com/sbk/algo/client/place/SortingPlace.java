@@ -8,7 +8,7 @@ import com.google.gwt.place.shared.Prefix;
  * Created by sobik on 31/08/2014.
  */
 public class SortingPlace extends Place {
-    private static final String VIEW_HISTORY_TOKEN = "sorting";
+    private static final String VIEW_HISTORY_TOKEN = "sort";
 
     public SortingPlace() {
     }

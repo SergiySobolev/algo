@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+        >
+
+    <ui:with field='css' type="com.sbk.algo.client.resources.AlgoResources"/>
+    <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
+
+    <gwt:HTMLPanel addStyleNames="{css.algoCSS.content}">
+        <gwt:Anchor text="11111" href="#sortHeap:"
+                    addStyleNames="{css.algoCSS.shortcut}"/>
+        <gwt:Anchor text="2222" href="#sortMerge:"
+                    addStyleNames="{css.algoCSS.shortcut}"/>
+    </gwt:HTMLPanel>
+</ui:UiBinder>

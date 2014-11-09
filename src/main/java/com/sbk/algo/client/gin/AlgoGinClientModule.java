@@ -11,19 +11,20 @@ import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.inject.Singleton;
 import com.sbk.algo.client.Algo;
-import com.sbk.algo.client.activity.GraphActivity;
-import com.sbk.algo.client.activity.SortingActivity;
 import com.sbk.algo.client.gin.providers.ActivityManagerProvider;
 import com.sbk.algo.client.gin.providers.PlaceControllerProvider;
 import com.sbk.algo.client.gin.providers.PlaceHistoryHandlerProvider;
 import com.sbk.algo.client.history.AlgoActivityMapper;
 import com.sbk.algo.client.history.AlgoHistoryMapper;
 import com.sbk.algo.client.layout.AlgoLayout;
+import com.sbk.algo.client.localization.AlgoConstants;
 import com.sbk.algo.client.place.SortingPlace;
 import com.sbk.algo.client.resources.AlgoResources;
-import com.sbk.algo.client.view.implementation.GraphView;
-import com.sbk.algo.client.view.implementation.SortingView;
+import com.sbk.algo.client.view.impl.GraphView;
+import com.sbk.algo.client.view.impl.SortHeapView;
+import com.sbk.algo.client.view.impl.SortingView;
 import com.sbk.algo.client.view.interfaces.IGraphView;
+import com.sbk.algo.client.view.interfaces.ISortHeapView;
 import com.sbk.algo.client.view.interfaces.ISortingView;
 
 /**
@@ -42,15 +43,11 @@ public class AlgoGinClientModule extends AbstractGinModule {
         bind(ActivityManager.class).toProvider(ActivityManagerProvider.class).asEagerSingleton();
         bind(Place.class).to(SortingPlace.class);
         bind(AlgoResources.class).asEagerSingleton();
-        //activities;
-        bind(SortingActivity.class).in(Singleton.class);
-        bind(GraphActivity.class).in(Singleton.class);
+        bind(AlgoConstants.class).asEagerSingleton();
         //views
-
         bind(ISortingView.class).to(SortingView.class).in(Singleton.class);
         bind(IGraphView.class).to(GraphView.class).in(Singleton.class);
-//        bind(GraphView.class).in(Singleton.class);
-//        bind(SortingView.class).in(Singleton.class);
+        bind(ISortHeapView.class).to(SortHeapView.class).in(Singleton.class);
 
         requestStaticInjection(Algo.class);
     }
