@@ -33,6 +33,39 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, .42) inset, 0 1px 0 rgba(255, 255, 255, .1);
 }
 
+.view-block {
+    background: rgba(0, 0, 0, .15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .42) inset, 0 1px 0 rgba(255, 255, 255, .1);
+    width: 870px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.block-title {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 100%;
+    text-shadow: none;
+    background: #333;
+    display: inline-block;
+    color: #fff;
+    padding: 6px 10px 5px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .2);
+    margin: 0 0 15px;
+}
+
+.btn {
+    background-color: #fff;
+    font-size: 13px;
+    border: 1px solid #B6B6B6;
+    border-radius: 0;
+    padding: 6px 12px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .15);
+}
+
 .shortcut {
     width: 105px;
     margin: 0 10px 10px 0;
@@ -125,6 +158,18 @@ ul.menu {
     color: #555;
 }
 
+.pad10 {
+    padding: 10px;
+}
+
+.ovrflwAuto {
+    overflow: auto;
+}
+
+.width97 {
+    width: 97%;
+}
+
 .form-control:focus {
     outline: 0;
 }
@@ -142,6 +187,10 @@ ul.menu {
 
 .float-right {
     float: right;
+}
+
+.display-inline-block {
+    display: inline-block;
 }
 
 
