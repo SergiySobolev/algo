@@ -40,7 +40,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
         servletContext.addListener(new ContextLoaderListener(rootCtx));
 
         ServletRegistration.Dynamic servlet = servletContext.addServlet("springGwtRemoteServiceServlet", new SpringGwtRemoteServiceServlet());
-        servlet.addMapping("/springGwtServices/*");
+        servlet.addMapping("/algo/algoserv/*");
         servlet.setLoadOnStartup(1);
     }
 }
