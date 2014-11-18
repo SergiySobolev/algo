@@ -3,10 +3,28 @@
              xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
              xmlns:widget="urn:import:com.sbk.algo.client.view.widget">
 
-    <ui:with field='css' type="com.sbk.algo.client.resources.AlgoResources"/>
+    <ui:with field='res' type="com.sbk.algo.client.resources.AlgoResources"/>
     <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
 
-    <gwt:HTMLPanel addStyleNames="{css.algoCSS.content}">
+    <gwt:FlowPanel addStyleNames="{res.algoCSS.content} {res.algoCSS.dispInlBlk}">
         <widget:SortAlgoLinks/>
-    </gwt:HTMLPanel>
+        <gwt:FlowPanel ui:field="inputDataPanel" addStyleNames="{res.algoCSS.viewBlock}">
+            <gwt:Label text="{i18n.inputData}" addStyleNames="{res.algoCSS.blockTitle}"/>
+            <gwt:FlowPanel>
+                <gwt:Button text="{i18n.generate}" addStyleNames="{res.algoCSS.btn}" ui:field="generButton"/>
+                <gwt:Label addStyleNames="{res.algoCSS.pad10} {res.algoCSS.ovrflwAuto} {res.algoCSS.width97}"
+                           ui:field="generListLbl"/>
+            </gwt:FlowPanel>
+        </gwt:FlowPanel>
+
+        <gwt:FlowPanel ui:field="outputDataPanel" addStyleNames="{res.algoCSS.viewBlock}">
+            <gwt:Label text="{i18n.outputData}" addStyleNames="{res.algoCSS.blockTitle}"/>
+            <gwt:FlowPanel>
+                <gwt:Button text="{i18n.sort}" addStyleNames="{res.algoCSS.btn}" ui:field="sortButton"/>
+                <gwt:Label addStyleNames="{res.algoCSS.pad10} {res.algoCSS.ovrflwAuto} {res.algoCSS.width97}"
+                           ui:field="sortedListLbl"/>
+            </gwt:FlowPanel>
+        </gwt:FlowPanel>
+    </gwt:FlowPanel>
+
 </ui:UiBinder>

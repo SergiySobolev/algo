@@ -3,6 +3,7 @@ package com.sbk.algo.client.service;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+import com.sbk.algo.shared.enums.SortingType;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface SortingService extends RemoteService {
 
     List<Integer> generate(Integer capacity);
 
-    List<Integer> sort();
+    List<Integer> sort(SortingType sortingType);
 
     /**
      * Utility/Convenience class.

@@ -6,9 +6,11 @@
     <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
 
     <gwt:HTMLPanel addStyleNames="{res.algoCSS.dispInlBlk}">
-        <gwt:Anchor text="{i18n.heapSort}" href="#sortHeap:"
+        <gwt:Anchor text="{i18n.heapSort}" href="#sort:heap"
                     addStyleNames="{res.algoCSS.shortcut}"/>
-        <gwt:Anchor text="{i18n.mergeSort}" href="#sortMerge:"
+        <gwt:Anchor text="{i18n.quickSort}" href="#sort:quick"
+                    addStyleNames="{res.algoCSS.shortcut}"/>
+        <gwt:Anchor text="{i18n.mergeSort}" href="#sort:merge"
                     addStyleNames="{res.algoCSS.shortcut}"/>
     </gwt:HTMLPanel>
 

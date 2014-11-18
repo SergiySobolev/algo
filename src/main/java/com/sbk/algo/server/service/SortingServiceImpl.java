@@ -3,6 +3,7 @@ package com.sbk.algo.server.service;
 import com.google.common.collect.Lists;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.sbk.algo.client.service.SortingService;
+import com.sbk.algo.shared.enums.SortingType;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,7 +32,7 @@ public class SortingServiceImpl extends RemoteServiceServlet implements SortingS
     }
 
     @Override
-    public List<Integer> sort() {
+    public List<Integer> sort(SortingType sortingType) {
         sortedList.clear();
         sortedList.addAll(genList);
         this.buildMapHeap(sortedList, sortedList.size());

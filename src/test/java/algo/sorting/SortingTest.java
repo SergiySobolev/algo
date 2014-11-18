@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import com.sbk.algo.client.service.SortingService;
 import com.sbk.algo.config.WebAppConfig;
 import com.sbk.algo.config.WebAppInitializer;
+import com.sbk.algo.shared.enums.SortingType;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -71,6 +72,6 @@ public class SortingTest {
     public void testHeapSort() {
         System.out.println(sortingService.generate(20));
         // System.out.println(sortingService.sort());
-        assertTrue(testSortedAscEqual(sortingService.sort()));
+        assertTrue(testSortedAscEqual(sortingService.sort(SortingType.HEAP)));
     }
 }

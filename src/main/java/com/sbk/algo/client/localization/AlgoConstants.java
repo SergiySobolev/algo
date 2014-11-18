@@ -25,6 +25,9 @@ public interface AlgoConstants extends Constants {
     @DefaultStringValue("Heap sort")
     String heapSort();
 
+    @DefaultStringValue("Quick sort")
+    String quickSort();
+
     @DefaultStringValue("Merge sort")
     String mergeSort();
 

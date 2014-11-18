@@ -16,7 +16,6 @@ public class PlaceHistoryHandlerProvider implements Provider<PlaceHistoryHandler
     @Inject
     public PlaceHistoryHandlerProvider(PlaceHistoryMapper historyMapper) {
         this.placeHistoryHandler = new PlaceHistoryHandler(historyMapper);
-        ;
     }
 
     @Override

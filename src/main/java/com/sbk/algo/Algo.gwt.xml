@@ -9,7 +9,9 @@
     <inherits name="com.google.gwt.inject.Inject"/>
 
     <entry-point class='com.sbk.algo.client.Algo'/>
-    <servlet path="/SortingService" class="com.sbk.algo.server.service.SortingServiceImpl"/>
 
+    <source path='client'/>
+    <source path='shared'/>
+    <source path='test'/>
 
 </module>
