@@ -1,40 +1,22 @@
-package com.sbk.algo.server.service;
+package com.sbk.algo.server.service.sorting.strategy;
 
 import com.google.common.collect.Lists;
-import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.sbk.algo.client.service.SortingService;
 import com.sbk.algo.shared.enums.SortingType;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Random;
 
 /**
- * Created by sobik on 11/11/2014.
+ * Created by sobik on 18/11/2014.
  */
-@Service("sortingService")
-@Transactional
-public class SortingServiceImpl extends RemoteServiceServlet implements SortingService {
+@SortStrategy(type = SortingStrategy.class, sortingType = SortingType.HEAP)
+public class HeapSortingStrategy implements SortingStrategy {
 
-    Random rnd = new Random();
-    private List<Integer> genList = Lists.newArrayList();
     private List<Integer> sortedList = Lists.newArrayList();
 
     @Override
-    //TODO add optional to ret type
-    public List<Integer> generate(Integer capacity) {
-        genList.clear();
-        for (int i = 0; i < capacity; i++) {
-            genList.add(rnd.nextInt(capacity * 3));
-        }
-        return genList;
-    }
-
-    @Override
-    public List<Integer> sort(SortingType sortingType) {
+    public List<Integer> sort(List<Integer> listToSort) {
         sortedList.clear();
-        sortedList.addAll(genList);
+        sortedList.addAll(listToSort);
         this.buildMapHeap(sortedList, sortedList.size());
         int heapSize = sortedList.size();
         for (int i = sortedList.size(); i > 0; i--) {
@@ -43,6 +25,7 @@ public class SortingServiceImpl extends RemoteServiceServlet implements SortingS
             this.mapHeapify(sortedList, 0, heapSize);
         }
         return sortedList;
+
     }
 
     private int left(int i) {
