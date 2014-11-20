@@ -31,6 +31,9 @@ public interface AlgoConstants extends Constants {
     @DefaultStringValue("Merge sort")
     String mergeSort();
 
+    @DefaultStringValue("Jung sort")
+    String jungSort();
+
     @DefaultStringValue("Input data:")
     String inputData();
 

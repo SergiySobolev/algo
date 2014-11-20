@@ -8,8 +8,8 @@ import java.util.List;
 /**
  * Created by sobik on 18/11/2014.
  */
-@SortStrategy(type = SortingStrategy.class, sortingType = SortingType.HEAP)
-public class HeapSortingStrategy implements SortingStrategy {
+@SortStrategy(sortingType = SortingType.HEAP)
+public class HeapSortingStrategy extends AbstractSortingStrategy {
 
     private List<Integer> sortedList = Lists.newArrayList();
 
@@ -34,12 +34,6 @@ public class HeapSortingStrategy implements SortingStrategy {
 
     private int right(int i) {
         return left(i) + 1;
-    }
-
-    private void swap(List<Integer> list, int i, int j) {
-        Integer temp = list.get(i);
-        list.set(i, list.get(j));
-        list.set(j, temp);
     }
 
     private void mapHeapify(List<Integer> list, int i, int heapSize) {

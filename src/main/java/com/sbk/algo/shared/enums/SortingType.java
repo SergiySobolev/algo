@@ -9,7 +9,8 @@ import java.util.Map;
 public enum SortingType {
     HEAP("heap"),
     QUICK("quick"),
-    MERGE("merge");
+    MERGE("merge"),
+    JUNG("jung");
 
     private static final Map<String, SortingType> lookup = new HashMap<String, SortingType>();
 
