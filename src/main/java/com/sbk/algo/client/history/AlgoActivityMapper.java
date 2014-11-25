@@ -15,10 +15,10 @@ public class AlgoActivityMapper implements ActivityMapper {
     private SortingFacadeActivity sortingFacadeActivity;
 
     @Inject
-    private GraphActivity graphActivity;
+    private SortingActivity sortingActivity;
 
     @Inject
-    private SortingActivity sortingActivity;
+    private GraphActivity graphActivity;
 
     @Override
     public Activity getActivity(Place place) {
