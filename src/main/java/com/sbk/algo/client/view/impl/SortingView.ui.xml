@@ -25,6 +25,12 @@
                            ui:field="sortedListLbl"/>
             </gwt:FlowPanel>
         </gwt:FlowPanel>
+
+        <gwt:FlowPanel ui:field="timeElapsedPanel" visible="false" addStyleNames="{res.algoCSS.viewBlock}">
+            <gwt:Label text="{i18n.timeElapsed}" addStyleNames="{res.algoCSS.blockTitle}"/>
+            <gwt:Label ui:field="timeElapsedLbl"/>
+        </gwt:FlowPanel>
+
     </gwt:FlowPanel>
 
 </ui:UiBinder>

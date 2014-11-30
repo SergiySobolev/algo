@@ -28,9 +28,14 @@ public class SortingView extends Composite implements ISortingView {
     @UiField
     FlowPanel outputDataPanel;
     @UiField
+    FlowPanel timeElapsedPanel;
+    @UiField
     Label generListLbl;
     @UiField
     Label sortedListLbl;
+    @UiField
+    Label timeElapsedLbl;
+
     private ISortingPresenter presenter;
 
     public SortingView() {
@@ -49,6 +54,7 @@ public class SortingView extends Composite implements ISortingView {
             @Override
             public void onClick(ClickEvent event) {
                 presenter.sort();
+                timeElapsedPanel.setVisible(true);
             }
         });
     }
@@ -68,6 +74,10 @@ public class SortingView extends Composite implements ISortingView {
         sortedListLbl.setText(Joiner.on(",").skipNulls().join(sortedData));
     }
 
+    @Override
+    public void setElapsedTime(double seconds) {
+        timeElapsedLbl.setText("" + seconds);
+    }
 
     @UiTemplate("SortingView.ui.xml")
     interface SortHeapViewUiBinder extends UiBinder<Widget, SortingView> {

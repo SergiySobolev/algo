@@ -71,7 +71,6 @@ public class SortingTest {
     @Test
     public void testHeapSort() {
         System.out.println(sortingService.generate(20));
-        // System.out.println(sortingService.sort());
-        assertTrue(testSortedAscEqual(sortingService.sort(SortingType.HEAP)));
+        assertTrue(testSortedAscEqual(sortingService.sort(SortingType.HEAP).getResult()));
     }
 }

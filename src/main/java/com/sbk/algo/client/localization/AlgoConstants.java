@@ -45,4 +45,7 @@ public interface AlgoConstants extends Constants {
 
     @DefaultStringValue("Sort")
     String sort();
+
+    @DefaultStringValue("Time Elapsed")
+    String timeElapsed();
 }

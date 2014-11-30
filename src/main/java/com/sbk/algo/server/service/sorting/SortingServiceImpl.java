@@ -6,6 +6,7 @@ import com.sbk.algo.client.service.SortingService;
 import com.sbk.algo.server.service.sorting.strategy.SortingStrategy;
 import com.sbk.algo.server.service.sorting.strategy.SortingStrategyFactory;
 import com.sbk.algo.shared.enums.SortingType;
+import com.sbk.algo.shared.result.SortingResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -40,9 +41,12 @@ public class SortingServiceImpl extends RemoteServiceServlet implements SortingS
     }
 
     @Override
-    public List<Integer> sort(SortingType sortingType) {
+    public SortingResult sort(SortingType sortingType) {
         SortingStrategy strategy = strategyFactory.getStrategy(sortingType);
-        return strategy.sort(genList);
+        SortingResult ret = new SortingResult();
+        final List<Integer> sortedList = strategy.sort(genList);
+        ret.setResult(sortedList);
+        return ret;
     }
 
 

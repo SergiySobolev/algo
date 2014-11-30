@@ -1,9 +1,9 @@
 package com.sbk.algo.client.service;
 
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 import com.sbk.algo.shared.enums.SortingType;
+import com.sbk.algo.shared.result.SortingResult;
 
 import java.util.List;
 
@@ -15,17 +15,6 @@ public interface SortingService extends RemoteService {
 
     List<Integer> generate(Integer capacity);
 
-    List<Integer> sort(SortingType sortingType);
+    SortingResult sort(SortingType sortingType);
 
-    /**
-     * Utility/Convenience class.
-     * Use SortingService.App.getInstance() to access static instance of SortingServiceAsync
-     */
-    public static class App {
-        private static final SortingServiceAsync ourInstance = (SortingServiceAsync) GWT.create(SortingService.class);
-
-        public static SortingServiceAsync getInstance() {
-            return ourInstance;
-        }
-    }
 }

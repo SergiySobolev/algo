@@ -16,4 +16,6 @@ public interface ISortingView extends IsWidget {
 
     void setSortedData(List<Integer> sortedData);
 
+    void setElapsedTime(double seconds);
+
 }
