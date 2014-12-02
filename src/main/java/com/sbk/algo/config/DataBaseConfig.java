@@ -1,15 +1,12 @@
 package com.sbk.algo.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * Created by sobik on 10.08.2014.
  */
 @Configuration
-@EnableTransactionManagement
+//@EnableTransactionManagement
 //@EnableJpaRepositories("com.sbk.purchaccount.server.repository")
 //@PropertySource("classpath:props/application.properties")
 public class DataBaseConfig {
@@ -52,9 +49,9 @@ public class DataBaseConfig {
 //        return properties;
 //    }
 
-    @Bean
-    public DataSourceTransactionManager transactionManager() {
-        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
-        return transactionManager;
-    }
+//    @Bean
+//    public DataSourceTransactionManager transactionManager() {
+//        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
+//        return transactionManager;
+//    }
 }
