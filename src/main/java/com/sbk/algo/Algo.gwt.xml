@@ -14,4 +14,9 @@
     <source path='shared'/>
     <source path='test'/>
 
+    <generate-with
+            class="com.sbk.algo.shared.proxy.AlgoServiceInterfaceProxyGenerator">
+        <when-type-assignable class="com.google.gwt.user.client.rpc.RemoteService"/>
+    </generate-with>
+
 </module>
