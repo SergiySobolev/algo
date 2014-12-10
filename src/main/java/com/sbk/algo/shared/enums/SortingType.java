@@ -10,7 +10,8 @@ public enum SortingType {
     HEAP("heap"),
     QUICK("quick"),
     MERGE("merge"),
-    JUNG("jung");
+    JUNG("jung"),
+    BUCKET("bucket");
 
     private static final Map<String, SortingType> lookup = new HashMap<String, SortingType>();
 

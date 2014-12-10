@@ -14,6 +14,8 @@
                     addStyleNames="{res.algoCSS.shortcut}"/>
         <gwt:Anchor text="{i18n.jungSort}" href="#sort:jung"
                     addStyleNames="{res.algoCSS.shortcut}"/>
+        <gwt:Anchor text="{i18n.bucketSort}" href="#sort:bucket"
+                    addStyleNames="{res.algoCSS.shortcut}"/>
     </gwt:HTMLPanel>
 
 </ui:UiBinder>

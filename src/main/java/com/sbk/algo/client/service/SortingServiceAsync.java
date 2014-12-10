@@ -14,5 +14,4 @@ public interface SortingServiceAsync {
     void generate(Integer capacity, AsyncCallback<List<Integer>> async);
 
     void sort(SortingType sortingType, AsyncCallback<SortingResult> async);
-
 }

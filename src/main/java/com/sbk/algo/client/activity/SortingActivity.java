@@ -1,9 +1,9 @@
 package com.sbk.algo.client.activity;
 
 import com.google.gwt.event.shared.EventBus;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
+import com.sbk.algo.client.rpc.AlgoCallbackAdapter;
 import com.sbk.algo.client.service.SortingServiceAsync;
 import com.sbk.algo.client.view.interfaces.ISortingView;
 import com.sbk.algo.client.view.presenters.ISortingPresenter;
@@ -35,12 +35,7 @@ public class SortingActivity extends AbstractAlgoActivity implements ISortingPre
 
     @Override
     public void generateInputData() {
-        sortingService.generate(100000, new AsyncCallback<List<Integer>>() {
-            @Override
-            public void onFailure(Throwable caught) {
-
-            }
-
+        sortingService.generate(100000, new AlgoCallbackAdapter<List<Integer>>() {
             @Override
             public void onSuccess(List<Integer> result) {
                 view.setGeneratedData(result);
@@ -50,12 +45,7 @@ public class SortingActivity extends AbstractAlgoActivity implements ISortingPre
 
     @Override
     public void sort() {
-        sortingService.sort(sortingType, new AsyncCallback<SortingResult>() {
-            @Override
-            public void onFailure(Throwable caught) {
-
-            }
-
+        sortingService.sort(sortingType, new AlgoCallbackAdapter<SortingResult>() {
             @Override
             public void onSuccess(SortingResult result) {
                 view.setSortedData(result.getResult());
