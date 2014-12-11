@@ -13,6 +13,9 @@ public interface AlgoConstants extends Constants {
     @DefaultStringValue("Sorting")
     String sorting();
 
+    @DefaultStringValue("Data structure")
+    String dataStructure();
+
     @DefaultStringValue("Graph")
     String graphs();
 
@@ -36,6 +39,9 @@ public interface AlgoConstants extends Constants {
 
     @DefaultStringValue("Bucket sort")
     String bucketSort();
+
+    @DefaultStringValue("Radix sort")
+    String radixSort();
 
     @DefaultStringValue("Input data:")
     String inputData();
