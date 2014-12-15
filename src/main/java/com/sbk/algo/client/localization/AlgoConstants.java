@@ -13,6 +13,12 @@ public interface AlgoConstants extends Constants {
     @DefaultStringValue("Sorting")
     String sorting();
 
+    @DefaultStringValue("Search")
+    String search();
+
+    @DefaultStringValue("Data Structure")
+    String dataStructure();
+
     @DefaultStringValue("Graph")
     String graphs();
 
