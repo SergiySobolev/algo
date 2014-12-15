@@ -10,10 +10,10 @@
                 <g:Anchor text="{i18n.sorting}" href="#sort:"/>
             </li>
             <li>
-                <g:Anchor text="{i18n.search}" href="#graph:"/>
+                <g:Anchor text="{i18n.search}" href="#search:"/>
             </li>
             <li>
-                <g:Anchor text="{i18n.dataStructure}" href="#graph:"/>
+                <g:Anchor text="{i18n.dataStructure}" href="#datastrct:"/>
             </li>
             <li>
                 <g:Anchor text="{i18n.graphs}" href="#graph:"/>
