@@ -1,4 +1,4 @@
-package com.sbk.algo.client.rpc;
+package com.sbk.core.client.rpc;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 

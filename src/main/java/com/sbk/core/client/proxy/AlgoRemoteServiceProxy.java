@@ -1,4 +1,4 @@
-package com.sbk.algo.shared.proxy;
+package com.sbk.core.client.proxy;
 
 import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.user.client.rpc.AsyncCallback;

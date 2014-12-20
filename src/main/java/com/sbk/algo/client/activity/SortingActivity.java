@@ -3,12 +3,12 @@ package com.sbk.algo.client.activity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
-import com.sbk.algo.client.rpc.AlgoCallbackAdapter;
 import com.sbk.algo.client.service.SortingServiceAsync;
 import com.sbk.algo.client.view.interfaces.ISortingView;
 import com.sbk.algo.client.view.presenters.ISortingPresenter;
 import com.sbk.algo.shared.enums.SortingType;
 import com.sbk.algo.shared.result.SortingResult;
+import com.sbk.core.client.rpc.AlgoCallbackAdapter;
 
 import java.util.List;
 

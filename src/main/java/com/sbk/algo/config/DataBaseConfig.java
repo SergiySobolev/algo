@@ -1,11 +1,9 @@
 package com.sbk.algo.config;
 
-import org.springframework.context.annotation.Configuration;
-
 /**
  * Created by sobik on 10.08.2014.
  */
-@Configuration
+//@Configuration
 //@EnableTransactionManagement
 //@EnableJpaRepositories("com.sbk.purchaccount.server.repository")
 //@PropertySource("classpath:props/application.properties")

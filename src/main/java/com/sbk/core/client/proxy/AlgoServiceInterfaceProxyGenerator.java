@@ -1,4 +1,4 @@
-package com.sbk.algo.shared.proxy;
+package com.sbk.core.client.proxy;
 
 import com.google.gwt.core.ext.typeinfo.JClassType;
 import com.google.gwt.user.rebind.rpc.ProxyCreator;

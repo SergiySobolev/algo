@@ -43,6 +43,9 @@ public interface AlgoConstants extends Constants {
     @DefaultStringValue("Bucket sort")
     String bucketSort();
 
+    @DefaultStringValue("Radix sort")
+    String radixSort();
+
     @DefaultStringValue("Input data:")
     String inputData();
 
