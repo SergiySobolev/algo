@@ -31,7 +31,6 @@ public class SortingServiceImpl extends RemoteServiceServlet implements SortingS
     private SortingStrategyFactory strategyFactory;
 
     @Override
-    //TODO add optional to ret type
     public List<Integer> generate(Integer capacity) {
         genList.clear();
         for (int i = 0; i < capacity; i++) {

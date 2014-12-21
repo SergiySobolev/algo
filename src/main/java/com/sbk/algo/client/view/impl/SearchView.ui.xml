@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+        >
+
+    <ui:with field='res' type="com.sbk.algo.client.resources.AlgoResources"/>
+    <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
+
+    <gwt:FlowPanel addStyleNames="{res.algoCSS.content} {res.algoCSS.dispInlBlk}">
+
+        <gwt:FlowPanel ui:field="inputDataPanel" addStyleNames="{res.algoCSS.viewBlock}">
+            <gwt:Label text="{i18n.inputData}" addStyleNames="{res.algoCSS.blockTitle}"/>
+            <gwt:FlowPanel>
+                <gwt:Button text="{i18n.generate}" addStyleNames="{res.algoCSS.btn}" ui:field="generButton"/>
+                <gwt:Label addStyleNames="{res.algoCSS.pad10} {res.algoCSS.ovrflwAuto} {res.algoCSS.width97}"
+                           ui:field="generListLbl"/>
+            </gwt:FlowPanel>
+        </gwt:FlowPanel>
+
+    </gwt:FlowPanel>
+
+</ui:UiBinder>
