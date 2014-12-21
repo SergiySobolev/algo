@@ -1,5 +1,6 @@
 package com.sbk.core.client.proxy;
 
+import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestCallback;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.rpc.impl.RemoteServiceProxy;
@@ -21,4 +22,13 @@ public class AlgoRemoteServiceProxy extends RemoteServiceProxy {
                                                           AsyncCallback<T> callback) {
         return super.doCreateRequestCallback(responseReader, methodName, statsContext, callback);
     }
+
+    protected <T> Request doInvoke(RequestCallbackAdapter.ResponseReader responseReader,
+                                   String methodName, RpcStatsContext statsContext, String requestData,
+                                   AsyncCallback<T> callback) {
+        AsyncCallbackWrapper callbackWrapper = new AsyncCallbackWrapper();
+        callbackWrapper.addCallback(callback);
+        return super.doInvoke(responseReader, methodName, statsContext, requestData, callbackWrapper);
+    }
+
 }
