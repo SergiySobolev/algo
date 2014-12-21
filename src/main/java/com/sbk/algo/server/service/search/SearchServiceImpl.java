@@ -29,7 +29,7 @@ public class SearchServiceImpl extends RemoteServiceServlet implements SearchSer
     }
 
     @Override
-    public Integer findMax(List<Integer> l) {
+    public Integer findMax() {
         Integer max = genList.get(0);
         for (int i = 1; i < genList.size(); i++) {
             if (genList.get(i) > max) {

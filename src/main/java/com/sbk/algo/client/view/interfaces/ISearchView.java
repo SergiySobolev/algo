@@ -13,4 +13,6 @@ public interface ISearchView extends IsWidget {
     void setPresenter(ISearchPresenter presenter);
 
     void setGeneratedData(List<Integer> generList);
+
+    void setMaxData(Integer result);
 }

@@ -13,5 +13,5 @@ public interface SearchService extends RemoteService {
 
     List<Integer> generate(Integer capacity);
 
-    Integer findMax(List<Integer> l);
+    Integer findMax();
 }

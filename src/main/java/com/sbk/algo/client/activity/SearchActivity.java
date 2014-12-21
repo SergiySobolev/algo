@@ -39,4 +39,14 @@ public class SearchActivity extends AbstractAlgoActivity implements ISearchPrese
         });
     }
 
+    @Override
+    public void findMax() {
+        searchService.findMax(new AlgoCallbackAdapter<Integer>() {
+            @Override
+            public void onSuccess(Integer result) {
+                view.setMaxData(result);
+            }
+        });
+    }
+
 }

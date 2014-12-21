@@ -8,12 +8,22 @@
 
     <gwt:FlowPanel addStyleNames="{res.algoCSS.content} {res.algoCSS.dispInlBlk}">
 
-        <gwt:FlowPanel ui:field="inputDataPanel" addStyleNames="{res.algoCSS.viewBlock}">
+        <gwt:FlowPanel addStyleNames="{res.algoCSS.viewBlock}">
             <gwt:Label text="{i18n.inputData}" addStyleNames="{res.algoCSS.blockTitle}"/>
             <gwt:FlowPanel>
-                <gwt:Button text="{i18n.generate}" addStyleNames="{res.algoCSS.btn}" ui:field="generButton"/>
+                <gwt:Button text="{i18n.generate}" addStyleNames="{res.algoCSS.btn}" ui:field="generBtn"/>
                 <gwt:Label addStyleNames="{res.algoCSS.pad10} {res.algoCSS.ovrflwAuto} {res.algoCSS.width97}"
                            ui:field="generListLbl"/>
+            </gwt:FlowPanel>
+        </gwt:FlowPanel>
+
+        <gwt:FlowPanel addStyleNames="{res.algoCSS.viewBlock}">
+            <gwt:Label text="{i18n.findMax}" addStyleNames="{res.algoCSS.blockTitle}"/>
+            <gwt:FlowPanel>
+                <gwt:Button text="{i18n.find}" addStyleNames="{res.algoCSS.btn} {res.algoCSS.dispInlBlk}"
+                            ui:field="findMaxBtn"/>
+                <gwt:Label addStyleNames="{res.algoCSS.pad10} {res.algoCSS.dispInlBlk}"
+                           ui:field="findMaxResultLbl"/>
             </gwt:FlowPanel>
         </gwt:FlowPanel>
 

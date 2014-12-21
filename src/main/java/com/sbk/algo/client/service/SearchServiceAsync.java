@@ -7,5 +7,5 @@ import java.util.List;
 public interface SearchServiceAsync {
     void generate(Integer capacity, AsyncCallback<List<Integer>> async);
 
-    void findMax(List<Integer> l, AsyncCallback<Integer> async);
+    void findMax(AsyncCallback<Integer> async);
 }

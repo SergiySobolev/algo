@@ -60,4 +60,10 @@ public interface AlgoConstants extends Constants {
 
     @DefaultStringValue("Time Elapsed")
     String timeElapsed();
+
+    @DefaultStringValue("Find")
+    String find();
+
+    @DefaultStringValue("Find Max")
+    String findMax();
 }
