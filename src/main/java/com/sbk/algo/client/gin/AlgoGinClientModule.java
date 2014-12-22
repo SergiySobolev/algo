@@ -16,6 +16,8 @@ import com.sbk.algo.client.gin.providers.PlaceControllerProvider;
 import com.sbk.algo.client.gin.providers.PlaceHistoryHandlerProvider;
 import com.sbk.algo.client.history.AlgoActivityMapper;
 import com.sbk.algo.client.history.AlgoHistoryMapper;
+import com.sbk.algo.client.history.AlgoMapperVisitor;
+import com.sbk.algo.client.history.AlgoMapperVisitorImpl;
 import com.sbk.algo.client.layout.AlgoLayout;
 import com.sbk.algo.client.localization.AlgoConstants;
 import com.sbk.algo.client.place.SortingPlace;
@@ -51,6 +53,7 @@ public class AlgoGinClientModule extends AbstractGinModule {
         bind(IGraphView.class).to(GraphView.class).in(Singleton.class);
         bind(ISortingView.class).to(SortingView.class).in(Singleton.class);
         bind(ISearchView.class).to(SearchView.class).in(Singleton.class);
+        bind(AlgoMapperVisitor.class).to(AlgoMapperVisitorImpl.class).in(Singleton.class);
 
         requestStaticInjection(Algo.class);
     }
