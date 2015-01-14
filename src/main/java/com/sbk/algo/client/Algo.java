@@ -11,9 +11,13 @@ import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import com.sbk.algo.client.gin.AlgoInjector;
 import com.sbk.algo.client.layout.AlgoLayout;
 import com.sbk.algo.client.resources.AlgoResources;
+import com.sbk.core.client.gin.CoreInjector;
+import com.sbk.core.client.handlers.GeneralHandler;
+import com.sbk.core.client.handlers.GeneralHandlerManager;
 
 /**
  * Created by sobik on 02/11/2014.
@@ -34,7 +38,10 @@ public class Algo implements EntryPoint {
     static Place defaultPlace;
     @Inject
     static AlgoResources resources;
-
+    @Inject
+    @Named("waitHandler")
+    static GeneralHandler waitHandler;
+    GeneralHandlerManager handlerManager = CoreInjector.INSTANCE.getHandlerManager();
     private SimplePanel appContent;
 
     public void onModuleLoad() {
@@ -44,6 +51,8 @@ public class Algo implements EntryPoint {
         activityManager.setDisplay(appContent);
         historyHandler.register(placeController, eventBus, defaultPlace);
         RootLayoutPanel.get().add(mainLayout);
+        handlerManager.addRequestHandler(waitHandler);
+        handlerManager.addResponseHandler(waitHandler);
         History.newItem("sort:");
     }
 

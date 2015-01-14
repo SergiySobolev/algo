@@ -10,6 +10,7 @@ import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.inject.Singleton;
+import com.google.inject.name.Names;
 import com.sbk.algo.client.Algo;
 import com.sbk.algo.client.gin.providers.ActivityManagerProvider;
 import com.sbk.algo.client.gin.providers.PlaceControllerProvider;
@@ -30,6 +31,8 @@ import com.sbk.algo.client.view.interfaces.IGraphView;
 import com.sbk.algo.client.view.interfaces.ISearchView;
 import com.sbk.algo.client.view.interfaces.ISortingFacadeView;
 import com.sbk.algo.client.view.interfaces.ISortingView;
+import com.sbk.core.client.handlers.GeneralHandler;
+import com.sbk.core.client.handlers.WaitHandler;
 
 /**
  * Created by sobik on 06/11/2014.
@@ -54,6 +57,7 @@ public class AlgoGinClientModule extends AbstractGinModule {
         bind(ISortingView.class).to(SortingView.class).in(Singleton.class);
         bind(ISearchView.class).to(SearchView.class).in(Singleton.class);
         bind(AlgoMapperVisitor.class).to(AlgoMapperVisitorImpl.class).in(Singleton.class);
+        bind(GeneralHandler.class).annotatedWith(Names.named("waitHandler")).to(WaitHandler.class).in(Singleton.class);
 
         requestStaticInjection(Algo.class);
     }

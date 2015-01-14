@@ -20,7 +20,6 @@ public class ChronometryAspect {
     public void sortOperation() {
     }
 
-    ;
 
     @Around("sortOperation()")
     public SortingResult chronoStart(final ProceedingJoinPoint pjp) throws Throwable {

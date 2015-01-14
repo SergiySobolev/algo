@@ -26,7 +26,10 @@ public class AlgoRemoteServiceProxy extends RemoteServiceProxy {
     protected <T> Request doInvoke(RequestCallbackAdapter.ResponseReader responseReader,
                                    String methodName, RpcStatsContext statsContext, String requestData,
                                    AsyncCallback<T> callback) {
-        AsyncCallbackWrapper callbackWrapper = new AsyncCallbackWrapper();
+
+        RequestInformation ri = new RequestInformation();
+        ri.setCallback(callback);
+        AsyncCallbackWrapper callbackWrapper = new AsyncCallbackWrapper(ri);
         callbackWrapper.addCallback(callback);
         return super.doInvoke(responseReader, methodName, statsContext, requestData, callbackWrapper);
     }
