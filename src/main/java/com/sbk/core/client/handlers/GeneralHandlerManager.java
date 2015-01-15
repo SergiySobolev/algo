@@ -17,7 +17,7 @@ public class GeneralHandlerManager {
 
     List<GwtRequestHandler> requestHandlerList = Lists.newArrayList();
 
-    List<GwtRequestHandler> responseHandlerList = Lists.newArrayList();
+    List<GwtResponseHandler> responseHandlerList = Lists.newArrayList();
 
     public static GeneralHandlerManager getInstance() {
         if (INSTANCE == null) {
@@ -34,7 +34,7 @@ public class GeneralHandlerManager {
 
     public void addResponseHandler(GeneralHandler handler) {
         if (handler instanceof GwtResponseHandler) {
-            responseHandlerList.add((GwtRequestHandler) handler);
+            responseHandlerList.add((GwtResponseHandler) handler);
         }
     }
 
@@ -42,6 +42,14 @@ public class GeneralHandlerManager {
         if (ri != null) {
             for (GwtRequestHandler grh : requestHandlerList) {
                 grh.processRequest(ri);
+            }
+        }
+    }
+
+    public void processResponseToListeners(RequestInformation ri) {
+        if (ri != null) {
+            for (GwtResponseHandler grh : responseHandlerList) {
+                grh.processResponse(ri);
             }
         }
     }

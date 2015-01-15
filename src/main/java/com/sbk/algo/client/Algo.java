@@ -41,7 +41,9 @@ public class Algo implements EntryPoint {
     @Inject
     @Named("waitHandler")
     static GeneralHandler waitHandler;
+
     GeneralHandlerManager handlerManager = CoreInjector.INSTANCE.getHandlerManager();
+
     private SimplePanel appContent;
 
     public void onModuleLoad() {

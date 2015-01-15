@@ -7,11 +7,13 @@ import com.google.gwt.user.client.rpc.impl.RemoteServiceProxy;
 import com.google.gwt.user.client.rpc.impl.RequestCallbackAdapter;
 import com.google.gwt.user.client.rpc.impl.RpcStatsContext;
 import com.google.gwt.user.client.rpc.impl.Serializer;
+import com.sbk.core.client.gin.CoreInjector;
 
 /**
  * Created by sobik on 08/12/2014.
  */
 public class AlgoRemoteServiceProxy extends RemoteServiceProxy {
+
     protected AlgoRemoteServiceProxy(String moduleBaseURL, String remoteServiceRelativePath, String serializationPolicyName, Serializer serializer) {
         super(moduleBaseURL, remoteServiceRelativePath, serializationPolicyName, serializer);
     }
@@ -29,8 +31,9 @@ public class AlgoRemoteServiceProxy extends RemoteServiceProxy {
 
         RequestInformation ri = new RequestInformation();
         ri.setCallback(callback);
-        AsyncCallbackWrapper callbackWrapper = new AsyncCallbackWrapper(ri);
-        callbackWrapper.addCallback(callback);
+        AsyncCallbackWrapper callbackWrapper = CoreInjector.INSTANCE.getNewAsyncCalbackWrapper();
+        callbackWrapper.setRi(ri);
+        callbackWrapper.processRequestToListeners();
         return super.doInvoke(responseReader, methodName, statsContext, requestData, callbackWrapper);
     }
 
