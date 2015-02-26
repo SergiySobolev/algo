@@ -1,6 +1,15 @@
 @url bgGen bgGeneral;
 @url bgCon bgContent;
 
+a {
+    color: #c7c7c7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkorange;
+}
+
 body {
     background-attachment: scroll;
     background-clip: border-box;
@@ -148,6 +157,17 @@ ul.menu {
 
 .top-search {
     float: right;
+    position: relative;
+    display: inline-block padding-right : 30 px;
+}
+
+.margin-left-15, div.margin-left-15 {
+    margin-left: 15px;
+}
+
+.login {
+    float: right;
+    margin: 5px;
     position: relative;
     display: inline-block padding-right : 30 px;
 }

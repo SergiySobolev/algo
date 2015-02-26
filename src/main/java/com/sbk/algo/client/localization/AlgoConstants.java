@@ -7,6 +7,12 @@ import com.google.gwt.i18n.client.Constants;
  */
 public interface AlgoConstants extends Constants {
 
+    @DefaultStringValue("Login")
+    String login();
+
+    @DefaultStringValue("Registration")
+    String registration();
+
     @DefaultStringValue("Algorithms")
     String algorithms();
 
