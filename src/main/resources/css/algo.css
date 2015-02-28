@@ -22,6 +22,20 @@ body {
     font-family: Verdana, serif;
 }
 
+button {
+    margin: 2px;
+}
+
+.popup {
+    background-clip: border-box;
+    background: rgba(0, 0, 0, 0) bgGen scroll;
+    background-origin: padding-box;
+    background-size: auto;
+    box-sizing: border-box;
+    color: rgb(199, 199, 199);
+    padding: 10px;
+}
+
 .header {
     padding: 15px;
 }
@@ -199,6 +213,10 @@ ul.menu {
 
 .display-inline-block {
     display: inline-block;
+}
+
+.login-panel {
+    height: 110px;
 }
 
 .not-visible {

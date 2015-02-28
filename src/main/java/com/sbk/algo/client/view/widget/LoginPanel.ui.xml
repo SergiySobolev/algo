@@ -1,12 +1,16 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-             xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui"
+             xmlns:core="urn:import:com.sbk.core.client.widget">
 
     <ui:with field='res' type="com.sbk.algo.client.resources.AlgoResources"/>
     <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
 
-    <gwt:HTMLPanel addStyleNames="{res.algoCSS.dispInlBlk}">
-        lalala
+    <gwt:HTMLPanel addStyleNames="{res.algoCSS.popup} {res.algoCSS.loginPanel}">
+        <core:TextField label="{i18n.userName}" ui:field="userName"/>
+        <core:PasswordField label="{i18n.password}" ui:field="password"/>
+        <gwt:Button ui:field="okButton" text="{i18n.ok}" addStyleNames="{res.algoCSS.floatRight}"/>
+        <gwt:Button ui:field="cancelButton" text="{i18n.cancel}" addStyleNames="{res.algoCSS.floatRight}"/>
     </gwt:HTMLPanel>
 
 </ui:UiBinder>

@@ -13,6 +13,18 @@ public interface AlgoConstants extends Constants {
     @DefaultStringValue("Registration")
     String registration();
 
+    @DefaultStringValue("User Name:")
+    String userName();
+
+    @DefaultStringValue("Password:")
+    String password();
+
+    @DefaultStringValue("Ok")
+    String ok();
+
+    @DefaultStringValue("Cancel")
+    String cancel();
+
     @DefaultStringValue("Algorithms")
     String algorithms();
 

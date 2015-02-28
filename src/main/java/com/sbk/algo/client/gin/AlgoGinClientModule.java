@@ -28,9 +28,6 @@ import com.sbk.algo.client.view.interfaces.*;
 import com.sbk.core.client.handlers.GeneralHandler;
 import com.sbk.core.client.handlers.WaitHandler;
 
-/**
- * Created by sobik on 06/11/2014.
- */
 public class AlgoGinClientModule extends AbstractGinModule {
     @Override
     protected void configure() {

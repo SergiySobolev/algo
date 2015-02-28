@@ -6,9 +6,6 @@ import com.google.inject.Inject;
 import com.sbk.algo.client.view.interfaces.ILoginView;
 import com.sbk.algo.client.view.presenters.ILoginPresenter;
 
-/**
- * Created by sobik on 28/02/2015.
- */
 public class LoginActivity extends AbstractAlgoActivity implements ILoginPresenter {
 
     @Inject
