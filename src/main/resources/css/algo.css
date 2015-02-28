@@ -84,16 +84,6 @@ button {
     margin: 0 0 15px;
 }
 
-.btn {
-    background-color: #fff;
-    font-size: 13px;
-    border: 1px solid #B6B6B6;
-    border-radius: 0;
-    padding: 6px 12px;
-    cursor: pointer;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, .15);
-}
-
 .shortcut {
     width: 105px;
     margin: 0 10px 10px 0;
