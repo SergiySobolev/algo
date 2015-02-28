@@ -11,17 +11,15 @@ a:hover {
 }
 
 body {
-    background-attachment: scroll;
     background-clip: border-box;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: bgGen;
+    background: rgba(0, 0, 0, 0) bgGen scroll;
     background-origin: padding-box;
     background-size: auto;
     box-sizing: border-box;
     color: rgb(199, 199, 199);
     display: block;
     line-height: 18px;
-    font-family: Verdana;
+    font-family: Verdana, serif;
 }
 
 .header {
@@ -87,7 +85,7 @@ body {
     box-shadow: inset 0 0 8px rgba(0, 0, 0, .2), 0 1px 0 #fff;
     border: 1px solid #ccc;
     background: #fff;
-    font-family: Verdana;
+    font-family: Verdana, serif;
     color: black;
     font-size: 15px;
     text-decoration: none;
@@ -102,38 +100,28 @@ ul.menu {
     -webkit-background-clip: border-box;
     -webkit-background-origin: padding-box;
     -webkit-background-size: auto;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.419608) 0px 0px 5px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.419608) 0 0 5px 0 inset, rgba(255, 255, 255, 0.0980392) 0 1px 0 0;
     -webkit-font-smoothing: antialiased;
-    background-attachment: scroll;
     background-clip: border-box;
-    background-color: rgba(0, 0, 0, 0.34902);
-    background-image: none;
+    background: rgba(0, 0, 0, 0.34902) none scroll;
     background-origin: padding-box;
     background-size: auto;
-    box-shadow: rgba(0, 0, 0, 0.419608) 0px 0px 5px 0px inset, rgba(255, 255, 255, 0.0980392) 0px 1px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.419608) 0 0 5px 0 inset, rgba(255, 255, 255, 0.0980392) 0 1px 0 0;
     box-sizing: border-box;
     color: rgb(199, 199, 199);
     display: block;
     font-size: 15px;
     height: 414px;
     line-height: 18px;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px;
-    padding-bottom: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 12px;
+    list-style: none outside none;
+    margin: 15px;
+    padding: 12px;
     width: 170px;
 }
 
 .content {
     background-image: bgCon;
-    margin: 16 16 16 16px;
+    margin: 16px;
     padding: 20px 20px 35px;
     position: relative;
     color: #333;

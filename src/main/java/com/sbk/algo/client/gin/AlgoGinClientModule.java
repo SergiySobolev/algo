@@ -23,14 +23,8 @@ import com.sbk.algo.client.layout.AlgoLayout;
 import com.sbk.algo.client.localization.AlgoConstants;
 import com.sbk.algo.client.place.SortingPlace;
 import com.sbk.algo.client.resources.AlgoResources;
-import com.sbk.algo.client.view.impl.GraphView;
-import com.sbk.algo.client.view.impl.SearchView;
-import com.sbk.algo.client.view.impl.SortingFacadeView;
-import com.sbk.algo.client.view.impl.SortingView;
-import com.sbk.algo.client.view.interfaces.IGraphView;
-import com.sbk.algo.client.view.interfaces.ISearchView;
-import com.sbk.algo.client.view.interfaces.ISortingFacadeView;
-import com.sbk.algo.client.view.interfaces.ISortingView;
+import com.sbk.algo.client.view.impl.*;
+import com.sbk.algo.client.view.interfaces.*;
 import com.sbk.core.client.handlers.GeneralHandler;
 import com.sbk.core.client.handlers.WaitHandler;
 
@@ -56,6 +50,8 @@ public class AlgoGinClientModule extends AbstractGinModule {
         bind(IGraphView.class).to(GraphView.class).in(Singleton.class);
         bind(ISortingView.class).to(SortingView.class).in(Singleton.class);
         bind(ISearchView.class).to(SearchView.class).in(Singleton.class);
+        bind(ILoginView.class).to(LoginView.class).in(Singleton.class);
+
         bind(AlgoMapperVisitor.class).to(AlgoMapperVisitorImpl.class).in(Singleton.class);
         bind(GeneralHandler.class).annotatedWith(Names.named("waitHandler")).to(WaitHandler.class).in(Singleton.class);
 

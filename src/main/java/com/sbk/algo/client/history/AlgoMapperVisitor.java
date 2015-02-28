@@ -2,6 +2,7 @@ package com.sbk.algo.client.history;
 
 import com.google.gwt.activity.shared.Activity;
 import com.sbk.algo.client.place.GraphPlace;
+import com.sbk.algo.client.place.LoginPlace;
 import com.sbk.algo.client.place.SearchPlace;
 import com.sbk.algo.client.place.SortingPlace;
 
@@ -14,4 +15,6 @@ public interface AlgoMapperVisitor {
     Activity visit(SearchPlace place);
 
     Activity visit(GraphPlace place);
+
+    Activity visit(LoginPlace loginPlace);
 }
