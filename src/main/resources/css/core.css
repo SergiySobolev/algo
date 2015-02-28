@@ -11,3 +11,32 @@
 .display-inline {
     display: inline;
 }
+
+.textbox {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.textbox label {
+    width: 100px;
+}
+
+.textbox input {
+    height: 30px;
+}
+
+.passwordbox {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.passwordbox label {
+    width: 100px;
+}
+
+.passwordbox input {
+    height: 30px;
+}
+
+
+

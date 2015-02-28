@@ -9,8 +9,8 @@
     <gwt:HTMLPanel addStyleNames="{res.algoCSS.popup} {res.algoCSS.loginPanel}">
         <core:TextField label="{i18n.userName}" ui:field="userName"/>
         <core:PasswordField label="{i18n.password}" ui:field="password"/>
-        <gwt:Button ui:field="okButton" text="{i18n.ok}" addStyleNames="{res.algoCSS.floatRight}"/>
         <gwt:Button ui:field="cancelButton" text="{i18n.cancel}" addStyleNames="{res.algoCSS.floatRight}"/>
+        <gwt:Button ui:field="okButton" text="{i18n.ok}" addStyleNames="{res.algoCSS.floatRight}"/>
     </gwt:HTMLPanel>
 
 </ui:UiBinder>

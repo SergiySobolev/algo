@@ -13,4 +13,10 @@ public interface CoreCSS extends CssResource {
     @ClassName("display-inline")
     String displayInline();
 
+    @ClassName("textbox")
+    String textBox();
+
+    @ClassName("passwordbox")
+    String passwordBox();
+
 }
