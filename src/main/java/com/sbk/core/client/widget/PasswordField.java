@@ -8,8 +8,6 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.PasswordTextBox;
 import com.google.gwt.user.client.ui.Widget;
-import com.sbk.core.client.gin.CoreInjector;
-import com.sbk.core.client.resources.CoreResources;
 
 public class PasswordField extends Composite {
 
@@ -18,7 +16,6 @@ public class PasswordField extends Composite {
     PasswordTextBox passwordBox;
     @UiField
     Label label;
-    private CoreResources resources = CoreInjector.INSTANCE.getCoreResources();
 
     public PasswordField() {
         initWidget(uiBinder.createAndBindUi(this));
@@ -31,7 +28,6 @@ public class PasswordField extends Composite {
     public String getText() {
         return passwordBox.getText();
     }
-
 
     @UiTemplate("PasswordField.ui.xml")
     interface PasswordFieldUiBinder extends UiBinder<Widget, PasswordField> {

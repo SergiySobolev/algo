@@ -13,6 +13,12 @@ public interface CoreCSS extends CssResource {
     @ClassName("display-inline")
     String displayInline();
 
+    @ClassName("dialogbox-caption")
+    String dialogBoxCaption();
+
+    @ClassName("float-right")
+    String floatRight();
+
     @ClassName("textbox")
     String textBox();
 

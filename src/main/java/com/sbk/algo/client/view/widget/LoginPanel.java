@@ -7,8 +7,6 @@ import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.sbk.core.client.gin.CoreInjector;
-import com.sbk.core.client.resources.CoreResources;
 import com.sbk.core.client.widget.PasswordField;
 import com.sbk.core.client.widget.TextField;
 
@@ -27,7 +25,6 @@ public class LoginPanel extends Composite {
     Button okButton;
     @UiField
     Button cancelButton;
-    CoreResources resources = CoreInjector.INSTANCE.getCoreResources();
 
     public LoginPanel() {
         initWidget(uiBinder.createAndBindUi(this));

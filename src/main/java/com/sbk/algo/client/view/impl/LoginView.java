@@ -3,26 +3,26 @@ package com.sbk.algo.client.view.impl;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiTemplate;
-import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.google.inject.Inject;
+import com.sbk.algo.client.localization.AlgoConstants;
 import com.sbk.algo.client.view.interfaces.ILoginView;
 import com.sbk.algo.client.view.presenters.ILoginPresenter;
-import com.sbk.core.client.gin.CoreInjector;
 import com.sbk.core.client.resources.CoreResources;
+import com.sbk.core.client.widget.CloseablePopupPanel;
 
-public class LoginView extends PopupPanel implements ILoginView {
+public class LoginView extends CloseablePopupPanel implements ILoginView {
 
     private static LoginViewUiBinder uiBinder = GWT.create(LoginViewUiBinder.class);
 
     private ILoginPresenter presenter;
 
-    private CoreResources resources = CoreInjector.INSTANCE.getCoreResources();
-
-    public LoginView() {
-        super(false, true);
-        this.setGlassStyleName(resources.coreCSS().glass());
+    @Inject
+    public LoginView(AlgoConstants algoConstants, CoreResources resources) {
+        super(true, true);
+        setText(algoConstants.login());
+        setGlassStyleName(resources.coreCSS().glass());
         add(uiBinder.createAndBindUi(this));
-        setGlassEnabled(true);
     }
 
     @Override

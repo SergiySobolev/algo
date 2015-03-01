@@ -12,6 +12,16 @@
     display: inline;
 }
 
+.dialogbox-caption {
+    background-color: black;
+    width: 100%;
+    padding: 5px;
+}
+
+.float-right {
+    float: right;
+}
+
 .textbox {
     padding-bottom: 5px;
     padding-top: 5px;

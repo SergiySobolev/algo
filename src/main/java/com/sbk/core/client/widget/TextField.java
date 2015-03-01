@@ -8,8 +8,6 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
-import com.sbk.core.client.gin.CoreInjector;
-import com.sbk.core.client.resources.CoreResources;
 
 public class TextField extends Composite {
 
@@ -18,7 +16,6 @@ public class TextField extends Composite {
     TextBox textBox;
     @UiField
     Label label;
-    private CoreResources resources = CoreInjector.INSTANCE.getCoreResources();
 
     public TextField() {
         initWidget(uiBinder.createAndBindUi(this));
