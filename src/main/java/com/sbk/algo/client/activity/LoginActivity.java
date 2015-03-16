@@ -1,12 +1,18 @@
 package com.sbk.algo.client.activity;
 
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
+import com.sbk.algo.client.service.security.AuthServiceAsync;
 import com.sbk.algo.client.view.interfaces.ILoginView;
 import com.sbk.algo.client.view.presenters.ILoginPresenter;
+import com.sbk.core.client.rpc.AlgoCallbackAdapter;
 
 public class LoginActivity extends AbstractAlgoActivity implements ILoginPresenter {
+
+    @Inject
+    AuthServiceAsync authService;
 
     @Inject
     ILoginView view;
@@ -18,7 +24,12 @@ public class LoginActivity extends AbstractAlgoActivity implements ILoginPresent
     }
 
     @Override
-    public void login() {
-
+    public void login(String login, String pwd) {
+        authService.authenticate(login, pwd, new AlgoCallbackAdapter<Void>() {
+            @Override
+            public void onSuccess(Void result) {
+                Window.alert("Success login");
+            }
+        });
     }
 }

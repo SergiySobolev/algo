@@ -9,22 +9,19 @@ import com.sbk.algo.shared.enums.SortingType;
 import com.sbk.algo.shared.result.SortingResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by sobik on 11/11/2014.
- */
 @Service("sortingService")
 @Transactional
 public class SortingServiceImpl extends RemoteServiceServlet implements SortingService {
 
     Random rnd = new Random();
     private List<Integer> genList = Lists.newArrayList();
-
 
     @Autowired
     @Qualifier(value = "sortingStrategyFactory")
@@ -40,6 +37,7 @@ public class SortingServiceImpl extends RemoteServiceServlet implements SortingS
     }
 
     @Override
+    @Secured({"ADMIN_ROLE", "USER_ROLE"})
     public SortingResult sort(SortingType sortingType) {
         SortingStrategy strategy = strategyFactory.getStrategy(sortingType);
         SortingResult ret = new SortingResult();

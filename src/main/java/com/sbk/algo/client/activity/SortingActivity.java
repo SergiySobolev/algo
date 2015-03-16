@@ -4,6 +4,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.sbk.algo.client.service.SortingServiceAsync;
+import com.sbk.algo.client.service.security.AuthServiceAsync;
 import com.sbk.algo.client.view.interfaces.ISortingView;
 import com.sbk.algo.client.view.presenters.ISortingPresenter;
 import com.sbk.algo.shared.enums.SortingType;
@@ -24,6 +25,9 @@ public class SortingActivity extends AbstractAlgoActivity implements ISortingPre
 
     @Inject
     private SortingServiceAsync sortingService;
+
+    @Inject
+    private AuthServiceAsync authService;
 
     private SortingType sortingType;
 

@@ -1,6 +1,7 @@
 package com.sbk.algo.client.view.widget;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiTemplate;
@@ -30,7 +31,26 @@ public class LoginPanel extends Composite {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
+    public void addOkClickHandler(ClickHandler okButtonClickHandler) {
+        okButton.addClickHandler(okButtonClickHandler);
+    }
+
+    public void addCancelClickHandler(ClickHandler cancelButtonClickHandler) {
+        cancelButton.addClickHandler(cancelButtonClickHandler);
+    }
+
+    public String getLogin() {
+        return userName.getText();
+    }
+
+    public String getPassword() {
+        return password.getText();
+    }
+
+
     @UiTemplate("LoginPanel.ui.xml")
     interface LoginPanelUiBinder extends UiBinder<Widget, LoginPanel> {
     }
+
+
 }

@@ -14,7 +14,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @ComponentScan("com.sbk.algo")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-//@Import({DataBaseConfig.class})
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 }

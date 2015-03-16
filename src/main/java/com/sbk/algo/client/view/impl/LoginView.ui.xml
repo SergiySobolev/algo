@@ -8,7 +8,7 @@
     <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
 
     <gwt:HTMLPanel>
-        <widget:LoginPanel/>
+        <widget:LoginPanel ui:field="loginPanel"/>
     </gwt:HTMLPanel>
 
 </ui:UiBinder>
