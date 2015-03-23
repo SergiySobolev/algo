@@ -3,9 +3,6 @@ package com.sbk.algo.shared.enums;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by sobik on 17/11/2014.
- */
 public enum SortingType {
     HEAP("heap"),
     QUICK("quick"),

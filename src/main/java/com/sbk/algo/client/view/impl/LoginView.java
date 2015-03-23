@@ -21,6 +21,7 @@ public class LoginView extends CloseablePopupPanel implements ILoginView {
     private static LoginViewUiBinder uiBinder = GWT.create(LoginViewUiBinder.class);
     @UiField
     LoginPanel loginPanel;
+
     private ILoginPresenter presenter;
 
     @Inject
@@ -38,6 +39,13 @@ public class LoginView extends CloseablePopupPanel implements ILoginView {
             @Override
             public void onClick(ClickEvent event) {
                 presenter.login("fabrizio", "javacodegeeks");
+                LoginView.this.hide();
+            }
+        });
+        lp.addCancelClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                LoginView.this.hide();
             }
         });
         return lp;

@@ -5,6 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@ComponentScan
+@ComponentScan("com.sbk.algo")
 public class RootConfig {
 }

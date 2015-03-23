@@ -2,6 +2,7 @@ package com.sbk.algo.server.security;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.sbk.algo.client.service.security.AuthService;
+import com.sbk.algo.shared.util.AlgoUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -24,17 +25,7 @@ public class AuthServiceImpl extends RemoteServiceServlet implements AuthService
     @Autowired
     private CustomAuthenticationProvider authenticationProvider;
 
-    @Override
-    public String retrieveUsername() {
-        Authentication authentication =
-                SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null) {
-            System.out.println("Not logged in");
-            return null;
-        } else {
-            return (String) authentication.getPrincipal();
-        }
-    }
+    private SecurityContext sc = new SecurityContextImpl();
 
     @Override
     public void authenticate(String login, String password) {
@@ -46,9 +37,15 @@ public class AuthServiceImpl extends RemoteServiceServlet implements AuthService
         } catch (BadCredentialsException e) {
             throw new RuntimeException(e);
         }
-        SecurityContext sc = new SecurityContextImpl();
         sc.setAuthentication(auth);
-
         SecurityContextHolder.setContext(sc);
+    }
+
+    @Override
+    public AlgoUser getAlgoUser() {
+        AlgoUser user = new AlgoUser();
+        Object principal = sc.getAuthentication().getPrincipal();
+        user.setName((String) principal);
+        return user;
     }
 }
