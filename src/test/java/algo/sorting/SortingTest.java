@@ -56,21 +56,8 @@ public class SortingTest {
         return true;
     }
 
-    private boolean cmpLists(List<Integer> l1, List<Integer> l2) {
-        if (l1.size() != l2.size()) {
-            return false;
-        }
-        for (int i = 0; i < l1.size(); i++) {
-            if (!l1.get(i).equals(l2.get(i))) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     @Test
     public void testHeapSort() {
-        System.out.println(sortingService.generate(20));
         assertTrue(testSortedAscEqual(sortingService.sort(SortingType.HEAP).getResult()));
     }
 }

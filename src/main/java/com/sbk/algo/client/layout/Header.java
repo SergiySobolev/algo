@@ -13,6 +13,9 @@ public class Header extends Composite {
     @UiField
     TextBox searchBox;
 
+    @UiField
+    GreetingPanel greetingPanel;
+
     public Header() {
         initWidget(uiBinder.createAndBindUi(this));
     }

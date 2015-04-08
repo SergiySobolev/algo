@@ -6,12 +6,10 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
-import com.sbk.algo.client.context.Context;
 import com.sbk.algo.client.event.LoginSucceedEvent;
 import com.sbk.algo.client.event.handler.LoginSucceedEventHandler;
 import com.sbk.algo.client.localization.AlgoConstants;
@@ -29,7 +27,6 @@ public class AlgoLayout extends Composite {
 
     private EventBus eventBus;
 
-
     @Inject
     @UiConstructor
     public AlgoLayout(EventBus eventBus, AlgoConstants cst) {
@@ -40,12 +37,12 @@ public class AlgoLayout extends Composite {
 
     @UiFactory
     Header constructHeader() {
-        Header h = new Header();
+        final Header h = new Header();
         h.setSearchPlaceHolder(cst.searchAlgorithms());
         eventBus.addHandler(LoginSucceedEvent.TYPE, new LoginSucceedEventHandler() {
             @Override
             public void loginSucceed(LoginSucceedEvent event) {
-                Window.alert(Context.getAlgoUser().getName());
+                h.greetingPanel.showGreeting();
             }
         });
         return h;

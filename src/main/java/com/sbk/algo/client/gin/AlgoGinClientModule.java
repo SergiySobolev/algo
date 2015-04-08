@@ -20,7 +20,6 @@ import com.sbk.algo.client.history.AlgoHistoryMapper;
 import com.sbk.algo.client.history.AlgoMapperVisitor;
 import com.sbk.algo.client.history.AlgoMapperVisitorImpl;
 import com.sbk.algo.client.layout.AlgoLayout;
-import com.sbk.algo.client.layout.Header;
 import com.sbk.algo.client.localization.AlgoConstants;
 import com.sbk.algo.client.place.SortingPlace;
 import com.sbk.algo.client.resources.AlgoResources;
@@ -34,7 +33,6 @@ public class AlgoGinClientModule extends AbstractGinModule {
     protected void configure() {
         //general
         bind(AlgoLayout.class).asEagerSingleton();
-        bind(EventBus.class).to(SimpleEventBus.class).asEagerSingleton();
         bind(ActivityMapper.class).to(AlgoActivityMapper.class).in(Singleton.class);
         bind(PlaceController.class).toProvider(PlaceControllerProvider.class).asEagerSingleton();
         bind(PlaceHistoryMapper.class).to(AlgoHistoryMapper.class).in(Singleton.class);
@@ -52,7 +50,8 @@ public class AlgoGinClientModule extends AbstractGinModule {
 
         bind(AlgoMapperVisitor.class).to(AlgoMapperVisitorImpl.class).in(Singleton.class);
         bind(GeneralHandler.class).annotatedWith(Names.named("waitHandler")).to(WaitHandler.class).in(Singleton.class);
-        bind(Header.class).in(Singleton.class);
+
+        bind(EventBus.class).to(SimpleEventBus.class).asEagerSingleton();
 
         requestStaticInjection(Algo.class);
     }

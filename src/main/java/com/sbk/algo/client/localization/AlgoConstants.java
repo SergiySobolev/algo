@@ -10,6 +10,9 @@ public interface AlgoConstants extends Constants {
     @DefaultStringValue("Login")
     String login();
 
+    @DefaultStringValue("Logout")
+    String logout();
+
     @DefaultStringValue("Registration")
     String registration();
 
@@ -18,6 +21,9 @@ public interface AlgoConstants extends Constants {
 
     @DefaultStringValue("Password:")
     String password();
+
+    @DefaultStringValue("Hello, ")
+    String hello();
 
     @DefaultStringValue("Ok")
     String ok();

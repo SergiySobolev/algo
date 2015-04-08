@@ -9,7 +9,6 @@ import com.sbk.algo.shared.enums.SortingType;
 import com.sbk.algo.shared.result.SortingResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,7 +36,6 @@ public class SortingServiceImpl extends RemoteServiceServlet implements SortingS
     }
 
     @Override
-    @Secured({"ADMIN_ROLE", "USER_ROLE"})
     public SortingResult sort(SortingType sortingType) {
         SortingStrategy strategy = strategyFactory.getStrategy(sortingType);
         SortingResult ret = new SortingResult();

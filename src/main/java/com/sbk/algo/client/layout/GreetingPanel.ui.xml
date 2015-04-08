@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:gwt="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:with field='css' type="com.sbk.algo.client.resources.AlgoResources"/>
+    <ui:with field='i18n' type='com.sbk.algo.client.localization.AlgoConstants'/>
+
+    <gwt:HTMLPanel>
+
+        <gwt:FlowPanel ui:field="unLoggedPanel">
+            <gwt:HTMLPanel addStyleNames="{css.algoCSS.login}">
+                <gwt:Anchor text="{i18n.registration}" href="#registration:"/>
+            </gwt:HTMLPanel>
+            <gwt:HTMLPanel addStyleNames="{css.algoCSS.marginLeft15} {css.algoCSS.login}">
+                <gwt:Anchor text="{i18n.login}" href="#login:"/>
+            </gwt:HTMLPanel>
+        </gwt:FlowPanel>
+
+        <gwt:FlowPanel ui:field="loggedPanel">
+            <gwt:HTMLPanel addStyleNames="{css.algoCSS.login}">
+                <gwt:InlineLabel text="{i18n.hello}"/>
+                <gwt:InlineLabel ui:field="greetingLabel"/>
+                <gwt:Anchor addStyleNames="{css.algoCSS.marginLeft15}" text="{i18n.logout}" href="#logout:"/>
+            </gwt:HTMLPanel>
+        </gwt:FlowPanel>
+
+    </gwt:HTMLPanel>
+
+
+</ui:UiBinder>
