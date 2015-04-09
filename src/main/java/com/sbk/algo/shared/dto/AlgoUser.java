@@ -1,4 +1,4 @@
-package com.sbk.algo.shared.util;
+package com.sbk.algo.shared.dto;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
 

@@ -2,7 +2,7 @@ package com.sbk.algo.server.security;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.sbk.algo.client.service.security.AuthService;
-import com.sbk.algo.shared.util.AlgoUser;
+import com.sbk.algo.shared.dto.AlgoUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -1,7 +1,7 @@
 package com.sbk.algo.client.context;
 
 
-import com.sbk.algo.shared.util.AlgoUser;
+import com.sbk.algo.shared.dto.AlgoUser;
 
 public class Context {
 

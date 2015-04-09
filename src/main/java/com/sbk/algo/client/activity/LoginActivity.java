@@ -8,7 +8,7 @@ import com.sbk.algo.client.event.LoginSucceedEvent;
 import com.sbk.algo.client.service.security.AuthServiceAsync;
 import com.sbk.algo.client.view.interfaces.ILoginView;
 import com.sbk.algo.client.view.presenters.ILoginPresenter;
-import com.sbk.algo.shared.util.AlgoUser;
+import com.sbk.algo.shared.dto.AlgoUser;
 import com.sbk.core.client.rpc.AlgoCallbackAdapter;
 
 public class LoginActivity extends AbstractAlgoActivity implements ILoginPresenter {
