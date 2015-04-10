@@ -38,7 +38,9 @@ public class AuthRepoTest {
     @Transactional
     public void getUserWithId1() {
         PrincipalEntity principal1 = principalRepository.getOne(1L);
-        PrincipalEntity principal2 = principalRepository.findProductById(1L);
+        PrincipalEntity principal2 = principalRepository.findPrincipalById(1L);
+        PrincipalEntity principal3 = principalRepository.findPrincipalByLogin("fabrizio");
         assertThat(principal1, equalTo(principal2));
+        assertThat(principal1, equalTo(principal3));
     }
 }

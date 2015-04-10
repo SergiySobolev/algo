@@ -19,6 +19,8 @@ public class GeneralHandlerManager {
 
     List<GwtResponseHandler> responseHandlerList = Lists.newArrayList();
 
+    List<GwtErrorHandler> errorHandlerList = Lists.newArrayList();
+
     public static GeneralHandlerManager getInstance() {
         if (INSTANCE == null) {
             INSTANCE = GWT.create(GeneralHandlerManager.class);
@@ -38,6 +40,12 @@ public class GeneralHandlerManager {
         }
     }
 
+    public void addErrorHandler(GeneralHandler handler) {
+        if (handler instanceof GwtErrorHandler) {
+            errorHandlerList.add((GwtErrorHandler) handler);
+        }
+    }
+
     public void processRequestToListeners(RequestInformation ri) {
         if (ri != null) {
             for (GwtRequestHandler grh : requestHandlerList) {
@@ -50,6 +58,14 @@ public class GeneralHandlerManager {
         if (ri != null) {
             for (GwtResponseHandler grh : responseHandlerList) {
                 grh.processResponse(ri);
+            }
+        }
+    }
+
+    public void processErrorToListeners(RequestInformation ri) {
+        if (ri != null) {
+            for (GwtErrorHandler geh : errorHandlerList) {
+                geh.processError(ri);
             }
         }
     }

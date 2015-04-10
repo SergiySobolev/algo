@@ -7,7 +7,7 @@ import com.sbk.core.client.widget.WaitGlassPanel;
  * Created by sobik on 13/01/2015.
  */
 
-public class WaitHandler implements GwtRequestHandler, GwtResponseHandler {
+public class WaitHandler implements GwtRequestHandler, GwtResponseHandler, GwtErrorHandler {
 
     final WaitGlassPanel glassPanel;
 
@@ -31,5 +31,12 @@ public class WaitHandler implements GwtRequestHandler, GwtResponseHandler {
 
     private boolean showGlasses(RequestInformation ri) {
         return true;
+    }
+
+    @Override
+    public void processError(RequestInformation information) {
+        if (showGlasses(information)) {
+            glassPanel.hide();
+        }
     }
 }

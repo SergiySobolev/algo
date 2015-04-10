@@ -1,5 +1,8 @@
 package com.sbk.algo.server.security;
 
+import com.sbk.algo.server.entity.PrincipalEntity;
+import com.sbk.algo.server.repo.PrincipalRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,19 +22,21 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         users.put("justin", "javacodegeeks");
     }
 
+    @Autowired
+    private PrincipalRepository principalRepository;
+
     @Override
     public Authentication authenticate(Authentication authentication)
             throws AuthenticationException {
 
-        String username = (String) authentication.getPrincipal();
+        String login = (String) authentication.getPrincipal();
         String password = (String) authentication.getCredentials();
 
-        if (users.get(username) == null)
+        PrincipalEntity principal = principalRepository.findPrincipalByLogin(login);
+        if (principal == null)
             throw new UsernameNotFoundException("User not found");
 
-        String storedPass = users.get(username);
-
-        if (!storedPass.equals(password))
+        if (!principal.getPassword().equals(password))
             throw new BadCredentialsException("Invalid password");
 
         Authentication customAuthentication =

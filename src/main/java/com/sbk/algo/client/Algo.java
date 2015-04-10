@@ -53,9 +53,14 @@ public class Algo implements EntryPoint {
         activityManager.setDisplay(appContent);
         historyHandler.register(placeController, eventBus, defaultPlace);
         RootLayoutPanel.get().add(mainLayout);
+        registerHandlers();
+        History.newItem("sort:");
+    }
+
+    private void registerHandlers() {
         handlerManager.addRequestHandler(waitHandler);
         handlerManager.addResponseHandler(waitHandler);
-        History.newItem("sort:");
+        handlerManager.addErrorHandler(waitHandler);
     }
 
     private void initInjection() {

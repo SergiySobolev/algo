@@ -38,7 +38,7 @@ public class LoginView extends CloseablePopupPanel implements ILoginView {
         lp.addOkClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                presenter.login("fabrizio", "javacodegeeks");
+                presenter.login(loginPanel.getLogin(), loginPanel.getPassword());
                 LoginView.this.hide();
             }
         });
