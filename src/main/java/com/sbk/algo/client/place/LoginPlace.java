@@ -5,9 +5,7 @@ import com.google.gwt.place.shared.PlaceTokenizer;
 import com.google.gwt.place.shared.Prefix;
 import com.sbk.algo.client.history.AlgoMapperVisitor;
 
-/**
- * Created by sobik on 31/08/2014.
- */
+
 public class LoginPlace extends AlgoPlace {
     private static final String VIEW_HISTORY_TOKEN = "login";
 

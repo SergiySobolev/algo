@@ -12,9 +12,6 @@ import com.sbk.core.client.widget.PasswordField;
 import com.sbk.core.client.widget.TextField;
 
 
-/**
- * Created by sobik on 27/02/2015.
- */
 public class LoginPanel extends Composite {
 
     private static LoginPanelUiBinder uiBinder = GWT.create(LoginPanelUiBinder.class);

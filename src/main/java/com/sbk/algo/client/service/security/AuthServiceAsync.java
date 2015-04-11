@@ -7,4 +7,6 @@ public interface AuthServiceAsync {
     void authenticate(String login, String password, AsyncCallback<Void> async);
 
     void getAlgoUser(AsyncCallback<AlgoUser> async);
+
+    void logout(AsyncCallback<Void> async);
 }

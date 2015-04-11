@@ -42,6 +42,12 @@ public class AuthServiceImpl extends RemoteServiceServlet implements AuthService
     }
 
     @Override
+    public void logout() {
+        SecurityContext context = SecurityContextHolder.getContext();
+        context.setAuthentication(null);
+    }
+
+    @Override
     public AlgoUser getAlgoUser() {
         AlgoUser user = new AlgoUser();
         Object principal = sc.getAuthentication().getPrincipal();

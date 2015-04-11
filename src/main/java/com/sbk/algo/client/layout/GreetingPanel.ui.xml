@@ -20,7 +20,7 @@
             <gwt:HTMLPanel addStyleNames="{css.algoCSS.login}">
                 <gwt:InlineLabel text="{i18n.hello}"/>
                 <gwt:InlineLabel ui:field="greetingLabel"/>
-                <gwt:Anchor addStyleNames="{css.algoCSS.marginLeft15}" text="{i18n.logout}" href="#logout:"/>
+                <gwt:Anchor ui:field="logoutLink" addStyleNames="{css.algoCSS.marginLeft15}" text="{i18n.logout}"/>
             </gwt:HTMLPanel>
         </gwt:FlowPanel>
 

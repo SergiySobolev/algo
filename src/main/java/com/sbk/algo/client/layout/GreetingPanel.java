@@ -1,14 +1,12 @@
 package com.sbk.algo.client.layout;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiTemplate;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.FlowPanel;
-import com.google.gwt.user.client.ui.InlineLabel;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.*;
 import com.sbk.algo.client.context.Context;
 
 public class GreetingPanel extends Composite {
@@ -24,6 +22,9 @@ public class GreetingPanel extends Composite {
     @UiField
     InlineLabel greetingLabel;
 
+    @UiField
+    Anchor logoutLink;
+
     @UiConstructor
     public GreetingPanel() {
         initWidget(uiBinder.createAndBindUi(this));
@@ -31,13 +32,23 @@ public class GreetingPanel extends Composite {
     }
 
     private void init() {
-        loggedPanel.setVisible(false);
+        showLogin();
     }
 
     public void showGreeting() {
         greetingLabel.setText(Context.getAlgoUser().getName());
         loggedPanel.setVisible(true);
         unLoggedPanel.setVisible(false);
+    }
+
+    public void showLogin() {
+        greetingLabel.setText(null);
+        loggedPanel.setVisible(false);
+        unLoggedPanel.setVisible(true);
+    }
+
+    public void addLogoutClickHandler(ClickHandler logoutClickHandler) {
+        logoutLink.addClickHandler(logoutClickHandler);
     }
 
     @UiTemplate("GreetingPanel.ui.xml")

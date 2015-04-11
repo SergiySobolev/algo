@@ -7,6 +7,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiFactory;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiTemplate;
+import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import com.sbk.algo.client.localization.AlgoConstants;
@@ -60,6 +61,12 @@ public class LoginView extends CloseablePopupPanel implements ILoginView {
     public void popup() {
         this.center();
         this.show();
+    }
+
+    @Override
+    public void hide() {
+        super.hide();
+        History.newItem("");
     }
 
     @UiTemplate(value = "LoginView.ui.xml")

@@ -8,5 +8,7 @@ import com.sbk.algo.shared.dto.AlgoUser;
 public interface AuthService extends RemoteService {
     void authenticate(String login, String password);
 
+    void logout();
+
     AlgoUser getAlgoUser();
 }

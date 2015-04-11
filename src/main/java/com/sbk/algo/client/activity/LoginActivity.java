@@ -5,6 +5,7 @@ import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.sbk.algo.client.context.Context;
 import com.sbk.algo.client.event.LoginSucceedEvent;
+import com.sbk.algo.client.event.LogoutEvent;
 import com.sbk.algo.client.service.security.AuthServiceAsync;
 import com.sbk.algo.client.view.interfaces.ILoginView;
 import com.sbk.algo.client.view.presenters.ILoginPresenter;
@@ -42,6 +43,16 @@ public class LoginActivity extends AbstractAlgoActivity implements ILoginPresent
                 });
             }
         });
+    }
 
+    @Override
+    public void logout() {
+        authService.logout(new AlgoCallbackAdapter<Void>() {
+            @Override
+            public void onSuccess(Void result) {
+                Context.setAlgoUser(null);
+                eventBus.fireEvent(new LogoutEvent());
+            }
+        });
     }
 }
