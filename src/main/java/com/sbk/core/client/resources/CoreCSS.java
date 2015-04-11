@@ -7,6 +7,12 @@ public interface CoreCSS extends CssResource {
     @ClassName("glass")
     String glass();
 
+    @ClassName("green")
+    String green();
+
+    @ClassName("red")
+    String red();
+
     @ClassName("padding-top-bot-5")
     String paddingTopBot5();
 
@@ -18,6 +24,9 @@ public interface CoreCSS extends CssResource {
 
     @ClassName("float-right")
     String floatRight();
+
+    @ClassName("text-center")
+    String textCenter();
 
     @ClassName("textbox")
     String textBox();

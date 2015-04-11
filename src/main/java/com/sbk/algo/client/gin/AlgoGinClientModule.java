@@ -21,6 +21,7 @@ import com.sbk.algo.client.history.AlgoMapperVisitor;
 import com.sbk.algo.client.history.AlgoMapperVisitorImpl;
 import com.sbk.algo.client.layout.AlgoLayout;
 import com.sbk.algo.client.localization.AlgoConstants;
+import com.sbk.algo.client.localization.AlgoMessages;
 import com.sbk.algo.client.place.SortingPlace;
 import com.sbk.algo.client.resources.AlgoResources;
 import com.sbk.algo.client.view.impl.*;
@@ -41,6 +42,7 @@ public class AlgoGinClientModule extends AbstractGinModule {
         bind(Place.class).to(SortingPlace.class);
         bind(AlgoResources.class).in(Singleton.class);
         bind(AlgoConstants.class).in(Singleton.class);
+        bind(AlgoMessages.class).in(Singleton.class);
         //views
         bind(ISortingFacadeView.class).to(SortingFacadeView.class).in(Singleton.class);
         bind(IGraphView.class).to(GraphView.class).in(Singleton.class);
