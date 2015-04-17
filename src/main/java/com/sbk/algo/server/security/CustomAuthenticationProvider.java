@@ -10,24 +10,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class CustomAuthenticationProvider implements AuthenticationProvider {
-
-    private static Map<String, String> users = new HashMap<String, String>();
-
-    static {
-        users.put("fabrizio", "javacodegeeks");
-        users.put("justin", "javacodegeeks");
-    }
 
     @Autowired
     private PrincipalRepository principalRepository;
 
     @Override
-    public Authentication authenticate(Authentication authentication)
-            throws AuthenticationException {
+    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
         String login = (String) authentication.getPrincipal();
         String password = (String) authentication.getCredentials();
@@ -44,9 +33,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         customAuthentication.setAuthenticated(true);
 
         return customAuthentication;
-
     }
-
 
     @Override
     public boolean supports(Class<? extends Object> authentication) {

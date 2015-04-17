@@ -25,6 +25,9 @@ public class AuthServiceImpl extends RemoteServiceServlet implements AuthService
     @Autowired
     private CustomAuthenticationProvider authenticationProvider;
 
+    @Autowired
+    private SecurityEventPublisher securityEventPublisher;
+
     private SecurityContext sc = new SecurityContextImpl();
 
     @Override
@@ -39,6 +42,7 @@ public class AuthServiceImpl extends RemoteServiceServlet implements AuthService
         }
         sc.setAuthentication(auth);
         SecurityContextHolder.setContext(sc);
+        securityEventPublisher.publish();
     }
 
     @Override

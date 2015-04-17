@@ -3,8 +3,10 @@ package com.sbk.algo.config;
 import com.sbk.algo.server.security.CustomAuthListener;
 import com.sbk.algo.server.security.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.event.AbstractAuthenticationEvent;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -22,7 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public CustomAuthListener customAuthListener() {
+    public ApplicationListener<AbstractAuthenticationEvent> customAuthListener() {
         return new CustomAuthListener();
     }
 
